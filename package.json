@@ -1,0 +1,50 @@
+{
+  "name": "geofabrik-extracts",
+  "version": "0.1.0",
+  "description": "Find the smallest geofarbik extract which contains a given Polygon.",
+  "license": "ISC",
+  "main": "index.js",
+  "scripts": {
+    "test": "jshint && npm run preprocess && tape test.js",
+    "preprocess": "./preprocess.sh",
+    "browser": "browserify -s findExtract index.js > findExtract.js"
+  },
+  "devDependencies": {
+    "jshint": "^2.5.10",
+    "retire": "*",
+    "tape": "^3.0.3",
+    "browserify": "*"
+  },
+  "jshintConfig": {
+    "browser": true,
+    "node": true,
+    "globalstrict": true,
+    "undef": true,
+    "unused": true,
+    "noarg": true
+  },
+  "dependencies": {
+    "findit": "~2.0.0",
+    "togeojson": "~0.10.1",
+    "geojson-area": "~0.2.0",
+    "geojson-flatten": "~0.1.0",
+    "turf-erase": "~1.3.0",
+    "turf-point": "~1.2.1",
+    "turf-inside": "~1.1.3",
+    "geojson-merge": "~0.1.0",
+    "jsdom": "~2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/BikeCitizens/geofabrik-extracts"
+  },
+  "keywords": [
+    "geofabrik",
+    "OpenStreetMap",
+    "extract"
+  ],
+  "author": "Martin Raifer <tyr.asd@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/BikeCitizens/geofabrik-extracts/issues"
+  }
+}
