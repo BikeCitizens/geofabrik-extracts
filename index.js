@@ -1,5 +1,5 @@
 var erase = require('turf-erase'),
-    inside = require('turf-inside'),
+    inside = require('@turf/boolean-point-in-polygon').default,
     point = require('turf-point');
 
 // find smallest area extract that fully includes the given polygon
